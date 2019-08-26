@@ -11,7 +11,7 @@ public class chromeDriver{
 	
 	public static void getChromeDriver() {
 		
-		System.setProperty("webdriver.chrome.driver", "D:/OdigoCode/odigo-automation-suite/drivers/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "D:/PersonalPractise/ProjectY3/ProjectMiCloudCheck/chromedriver.exe");
 		driver=new ChromeDriver();
 		getToLink();
 	}
