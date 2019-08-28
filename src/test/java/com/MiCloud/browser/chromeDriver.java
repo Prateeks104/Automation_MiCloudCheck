@@ -11,7 +11,8 @@ public class chromeDriver{
 	
 	public static void getChromeDriver() {
 		
-		System.setProperty("webdriver.chrome.driver", "D:/PersonalPractise/ProjectY3/ProjectMiCloudCheck/chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver", "D:/PersonalPractise/ProjectY3/ProjectMiCloudCheck/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "/opt/drivers");
 		driver=new ChromeDriver();
 		getToLink();
 	}
