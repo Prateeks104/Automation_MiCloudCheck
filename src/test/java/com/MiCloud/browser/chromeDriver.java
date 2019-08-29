@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class chromeDriver{
 
@@ -13,7 +14,7 @@ public class chromeDriver{
 		
 		//System.setProperty("webdriver.chrome.driver", "D:/PersonalPractise/ProjectY3/ProjectMiCloudCheck/chromedriver.exe");
 		System.setProperty("webdriver.chrome.driver", "/opt/drivers/geckodriver");
-		driver=new ChromeDriver();
+		driver=new FirefoxDriver();
 		getToLink();
 	}
 	
