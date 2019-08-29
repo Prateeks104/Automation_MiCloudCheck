@@ -12,8 +12,8 @@ public class chromeDriver{
 	
 	public static void getChromeDriver() {
 		
-		//System.setProperty("webdriver.chrome.driver", "D:/PersonalPractise/ProjectY3/ProjectMiCloudCheck/chromedriver.exe");
-		System.setProperty("webdriver.chrome.driver", "/opt/drivers/geckodriver");
+		//System.setProperty("webdriver.gecko.driver", "C:/Users/prateek.sharma2/Downloads/geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", "/opt/drivers/geckodriver");
 		driver=new FirefoxDriver();
 		getToLink();
 	}
