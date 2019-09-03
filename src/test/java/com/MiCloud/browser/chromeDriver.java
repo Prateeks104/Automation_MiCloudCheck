@@ -3,8 +3,9 @@ package com.MiCloud.browser;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 public class chromeDriver{
 
@@ -13,8 +14,15 @@ public class chromeDriver{
 	public static void getChromeDriver() {
 		
 		//System.setProperty("webdriver.gecko.driver", "C:/Users/prateek.sharma2/Downloads/geckodriver.exe");
+		FirefoxBinary firefoxBinary = new FirefoxBinary();
+		firefoxBinary.addCommandLineOptions("--headless");
+		   
 		System.setProperty("webdriver.gecko.driver", "/opt/drivers/geckodriver");
-		driver=new FirefoxDriver();
+		   
+		FirefoxOptions firefoxOptions = new FirefoxOptions();
+		firefoxOptions.setBinary(firefoxBinary);
+		
+		driver = new FirefoxDriver(firefoxOptions);
 		getToLink();
 	}
 	
