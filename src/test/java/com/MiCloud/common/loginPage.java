@@ -50,6 +50,7 @@ public class loginPage extends chromeDriver{
 		
 		public static void verifyUserName() {
 			String uname=getDriver().findElement(By.xpath("//span[contains(@class,'level')]")).getText();
+			System.out.println("The user name is "+uname);
 			boolean val=uname.contains("sher.singham18");
 			System.out.println("This is a basic verification of login successfull is "+val);
 			Assert.assertTrue(val);
