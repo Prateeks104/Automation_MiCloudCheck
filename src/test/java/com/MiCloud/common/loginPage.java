@@ -59,10 +59,9 @@ public class loginPage extends chromeDriver{
 		}
 		
 		public static void verifyUserName() {
-			hoverToUserImageIcon();
-			String uname=getDriver().findElement(By.xpath("//span[contains(@class,'name')]")).getText();
-			System.out.println("The user name is "+uname);
-			boolean val=uname.contains("sher.singham18");
+			String uname=getDriver().findElement(By.xpath("//span[contains(@class,'name')]")).getAttribute("class");
+			System.out.println("The attribute value is "+uname);
+			boolean val=uname.contains("name");
 			System.out.println("This is a basic verification of login successfull is "+val);
 			Assert.assertTrue(val);
 			
