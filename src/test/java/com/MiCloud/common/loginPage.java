@@ -2,10 +2,15 @@ package com.MiCloud.common;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 import com.MiCloud.browser.chromeDriver;
 
 public class loginPage extends chromeDriver{
+	
+		static Actions act=new Actions(getDriver());
+		
 	
 		public static void navigateToSignInWithMiAccount() {
 			getDriver().findElement(By.xpath("//span[text()='Sign in with Mi Account']")).click();
@@ -48,8 +53,14 @@ public class loginPage extends chromeDriver{
 			login();
 		}
 		
+		public static void hoverToUserImageIcon() {
+			WebElement el=getDriver().findElement(By.xpath("//a[contains(@class,'avatar')]"));
+			act.moveToElement(el).click().build().perform();
+		}
+		
 		public static void verifyUserName() {
-			String uname=getDriver().findElement(By.xpath("//span[contains(@class,'level')]")).getText();
+			hoverToUserImageIcon();
+			String uname=getDriver().findElement(By.xpath("//span[contains(@class,'name')]")).getText();
 			System.out.println("The user name is "+uname);
 			boolean val=uname.contains("sher.singham18");
 			System.out.println("This is a basic verification of login successfull is "+val);
