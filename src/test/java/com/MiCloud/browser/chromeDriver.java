@@ -15,12 +15,12 @@ public class chromeDriver{
 	public static void getChromeDriver() {
 		
 		//For Windows, as windows is using chromedriver. The chrome driver path is mentioned of project
-		/*System.setProperty("webdriver.chrome.driver", "./chromedriver.exe");
-		driver=new ChromeDriver();*/
+		System.setProperty("webdriver.chrome.driver", "./chromedriver.exe");
+		driver=new ChromeDriver();
 		
 		
 		//For Linux Cent OS machine, as Cent OS is using Firefox driver and the path of driver mentioned is of Cent OS machine  
-		FirefoxBinary firefoxBinary = new FirefoxBinary();
+		/*FirefoxBinary firefoxBinary = new FirefoxBinary();
 		firefoxBinary.addCommandLineOptions("--headless");
 		   
 		System.setProperty("webdriver.gecko.driver", "/opt/drivers/geckodriver");
@@ -28,7 +28,8 @@ public class chromeDriver{
 		FirefoxOptions firefoxOptions = new FirefoxOptions();
 		firefoxOptions.setBinary(firefoxBinary);
 		
-		driver = new FirefoxDriver(firefoxOptions);
+		driver = new FirefoxDriver(firefoxOptions);*/
+		
 		getToLink();
 	}
 	
