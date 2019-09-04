@@ -59,9 +59,9 @@ public class loginPage extends chromeDriver{
 		}
 		
 		public static void verifyUserName() {
-			String uname=getDriver().findElement(By.xpath("//span[contains(@class,'name')]")).getAttribute("class");
-			System.out.println("The attribute value is "+uname);
-			boolean val=uname.contains("name");
+			String c_URL=getDriver().getCurrentUrl();
+			System.out.println("The current url is "+c_URL);
+			boolean val=c_URL.contains("/#/");
 			System.out.println("This is a basic verification of login successfull is "+val);
 			Assert.assertTrue(val);
 			
