@@ -1,5 +1,6 @@
 package com.MiCloud.common;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 
 import com.MiCloud.browser.chromeDriver;
@@ -45,5 +46,13 @@ public class loginPage extends chromeDriver{
 			username();
 			password();
 			login();
+		}
+		
+		public static void verifyUserName() {
+			String uname=getDriver().findElement(By.xpath("//span[contains(@class,'level')]")).getText();
+			boolean val=uname.contains("sher.singham18");
+			System.out.println("This is a basic verification of login successfull is "+val);
+			Assert.assertTrue(val);
+			
 		}
 }

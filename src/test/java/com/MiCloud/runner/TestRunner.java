@@ -4,7 +4,6 @@ import org.junit.Test;
 
 import com.MiCloud.browser.chromeDriver;
 import com.MiCloud.common.loginPage;
-import com.MiCloud.common.loginPageVerification;
 
 
 public class TestRunner {
@@ -15,7 +14,7 @@ public class TestRunner {
 		chromeDriver.getChromeDriver();
 		
 		loginPage.loginWithCredentials();
-		loginPageVerification.verifyUserName();
+		loginPage.verifyUserName();
 		
 		//driver quitting method calling
 		chromeDriver.closeDriver();
