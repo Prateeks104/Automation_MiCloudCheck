@@ -59,6 +59,12 @@ public class loginPage extends chromeDriver{
 		}
 		
 		public static void verifyUserName() {
+			try {
+				Thread.sleep(5000);
+			}
+			catch (InterruptedException e) {
+				e.printStackTrace();
+			}
 			String c_URL=getDriver().getCurrentUrl();
 			System.out.println("The current url is "+c_URL);
 			boolean val=c_URL.contains("/#/");
