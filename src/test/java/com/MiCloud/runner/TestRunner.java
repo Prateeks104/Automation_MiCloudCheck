@@ -11,9 +11,14 @@ public class TestRunner {
 
 	@Test
 	public void RunnerTest() {
+		// driver initiation method calling
 		chromeDriver.getChromeDriver();
+		
 		loginPage.loginWithCredentials();
 		loginPageVerification.verifyUserName();
+		
+		//driver quitting method calling
+		chromeDriver.closeDriver();
 	}
 	
 }
