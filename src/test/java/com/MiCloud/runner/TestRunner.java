@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import com.MiCloud.browser.chromeDriver;
 import com.MiCloud.common.loginPage;
-import com.MiCloud.validates.loginPageVerification;
+import com.MiCloud.common.loginPageVerification;
 
 
 public class TestRunner {
